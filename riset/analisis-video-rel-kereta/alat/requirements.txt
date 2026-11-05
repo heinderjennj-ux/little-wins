@@ -1,0 +1,8 @@
+# Inti (tanpa model AI) — cukup untuk 01-04, 06, 09
+opencv-contrib-python-headless>=4.9
+numpy
+pillow
+scikit-learn
+scenedetect>=0.6
+librosa
+soundfile

@@ -1,0 +1,6 @@
+# Opsional — butuh internet ke HuggingFace / GitHub (jalan di localhost)
+torch
+torchvision
+transformers>=4.45      # Depth Anything V2 (05_kedalaman.py)
+faster-whisper          # transkrip + cap waktu per kata (08_audio.py)
+pyiqa                   # MUSIQ, NIMA, CLIP-IQA, LAION aesthetic (07_kualitas.py)
