@@ -5,6 +5,9 @@ Data teknis (ffprobe): 480×854 (9:16, versi unduhan 480p), 30 fps, 65,17 detik,
 Cara melihat: frame diambil tiap 0,2 detik (`ffmpeg -vf fps=5`) → 326 frame → 33 lembar kontak (10 frame / 2 detik per lembar), lalu diperiksa satu per satu.
 Video **tidak** disimpan di repo (hak cipta). Taruh sendiri di `alat/input/video.mp4` untuk menjalankan ulang.
 
+> **Koreksi 2026-11-05 (pass 2):** sampling 0,2 dtk melewatkan peristiwa yang < 0,2 dtk (topi terbang + tokoh jatuh di 3,2–3,7; ayunan beban crane & palu terlepas di 6,9–7,5).
+> Metode pass 2 (`alat/10_detail_pass2.py` + `04-checklist-detail.md`) wajib dijalankan sebelum analisis dianggap selesai.
+
 > Catatan jujur: bagian ini adalah **pengamatan visual** (mata, frame per frame). Angka gerak kamera, warna, kedalaman, dan audio
 > belum diukur di sesi ini karena prosesnya dihentikan. Skrip pengukurnya ada di `alat/`. Jalankan di localhost untuk mendapat angka pasti.
 
@@ -54,10 +57,10 @@ Format: waktu — narasi (caption) — **kamera** — tokoh/ekspresi — dunia &
 | 0,0–1,8 | "He sawed gaps into a railroad every 39 feet." | Rendah, dekat rel (lensa lebar), dorong pelan maju & naik | Insinyur jongkok menggergaji rel. Smug → mata ^^ bahagia saat gergaji kena (0,6) → seringai | Percikan api di titik gergaji. Lokomotif uap datang dari kejauhan, lampu depan bersinar, asap hitam; tebing merah, kaktus, tiang telegraf |
 | 1,8–2,4 | "every 39 feet" | **Whip pan** ke kanan menyapu tebing (blur gerak) | Tokoh berdiri, tangan di pinggang, smug | Bayangan tokoh jatuh di tebing |
 | 2,4–3,0 | "feet." | **Orbit** ±90° mengelilingi tokoh, sekarang menatap sepanjang rel | Tokoh terlihat dari samping (kartu 2D berputar) | Rel lurus panjang menyusuri tebing, jembatan di kejauhan |
-| 3,2–3,4 | "You see," | Kamera diam, kereta melintas sangat dekat di depan kiri | Meringis > < gigi grid | Badan lokomotif detail (dome, pipa, lampu) |
+| 3,07–3,7 | "You see," | Kamera hampir diam, kereta melintas sangat dekat di depan kiri, lalu kamera ikut kereta | **Angin kereta mengangkat topi** hingga miring & lepas (3,20); mata > < gigi grid, badan terdorong; **tokoh jatuh terjengkang**, kepala meluncur keluar bawah frame (3,57–3,7) | Badan lokomotif detail (dome, pipa, lampu). *Terlewat di pass 1, ditemukan owner & dikonfirmasi pada 30 fps* |
 | 3,6–4,0 | "two" | **Crane naik** mengikuti asap lalu **terbang melewati bibir tebing** | — | Pertama kali terlihat kedalaman ngarai biru |
 | 4,0–6,0 | "companies are racing to build railroad" | Turun & maju ke perancah trestle (drone) | Pekerja kecil di atas | Trestle kayu/besi, crane, kabut biru pekat di dasar |
-| 6,0–8,2 | "along a canyon so deep you can't see the bottom." | Melewati crane → kamera **menunduk** ke papan yang menjorok di atas jurang | Pekerja (kemeja kotak merah) di ujung papan | **Palu/paku jatuh ke jurang** (7,6) dan hilang dalam kabut. Cangkir di papan |
+| 6,0–8,2 | "along a canyon so deep you can't see the bottom." | Melewati crane → kamera **menunduk** ke papan yang menjorok di atas jurang | Pekerja (kemeja kotak merah) di ujung papan **menunduk melihat ke bawah**, palu **terlepas dari tangan** (7,40–7,47) | **Beban balok di crane berayun** di kabel (6,9–7,2); **palu berputar & jatuh ke jurang** (7,5–7,7) lalu hilang dalam kabut. Cangkir di papan. *Detail ayunan & palu terlepas ditemukan di pass 2* |
 | 8,4–9,0 | "And whoever" | **Crane/tilt naik vertikal cepat** menyusuri dinding tebing (blur) | — | Garis-garis strata jadi garis horizontal karena blur |
 | 9,0–10,4 | "finishes first gets the whole" | **Terbang FPV** rendah di atas gurun menuju kota | — | Rumput gurun, mesa di cakrawala, kota & stasiun berkubah. Blur tepi kuat |
 | 10,4–11,4 | "country's business." | Terbang masuk ke dalam stasiun, berhenti di depan panggung | Taipan: **wink** (11,2), seringai | Spanduk "FIRST LINE IN GETS IT ALL!", huruf "UNION", gunung koin emas, kantong uang "$", karpet merah, kubah kaca |

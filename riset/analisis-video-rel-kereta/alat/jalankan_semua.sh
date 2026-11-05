@@ -11,8 +11,9 @@ python 04_ukur.py "$V" "$O/ukur.csv"
 python 06_palet.py "$O/frames" "$O/palet"
 python 08_audio.py "$O/audio.wav" "$O/audio" ${AI:+--whisper small}
 python 09_ringkas.py "$O/ukur.csv" "$O/ringkasan.md"
+python 10_detail_pass2.py "$V" "$O/detail"     # pass 2: peristiwa singkat (jatuh, topi terbang, benda jatuh)
 if [ "$AI" = "--ai" ]; then
   python 05_kedalaman.py "$O/frames" "$O/kedalaman"
   python 07_kualitas.py "$O/frames" "$O/kualitas.csv"
 fi
-echo "Selesai. Buka $O/ringkasan.md, $O/palet/palet.md, $O/lembar/"
+echo "Selesai. Buka $O/ringkasan.md, $O/detail/peristiwa.csv + p_*.jpg, $O/palet/palet.md, $O/lembar/"
