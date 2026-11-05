@@ -9,6 +9,7 @@ Tujuan: melatih AI (Claude yang menulis kode Blender) supaya hasilnya sedetail v
 | `02-alat-profesional.md` | Alat apa mengukur apa (FFmpeg, PySceneDetect, OpenCV, Depth Anything, Dark Channel Prior, scopes DaVinci, pyiqa, Whisper, Blender Motion Tracking, fSpy, BlenderMCP…) + hasil pencarian skill/plugin + sumber |
 | `03-panduan-blender.md` | Menerjemahkan temuan ke **resep bpy**: render, dunia, tokoh 2D di 3D, ekspresi, kamera, warna, ritme, cara membandingkan render vs referensi |
 | `04-checklist-detail.md` | **Metode 3 pass** supaya detail kecil tidak terlewat (mis. tokoh jatuh & topi terbang saat kereta lewat), checklist per shot, langkah kerja di localhost, pertanyaan yang belum terjawab |
+| `05-catatan-perbaikan-buku-gaya.md` | **Audit `BUKU_GAYA.md`** (repo youtube, branch `claude/sharp-clarke-irc3u0`): lapisan yang belum ada (katalog peristiwa, alur emosi per tokoh, gerak sebagai animasi, sinkron narasi, kepadatan detail, transisi kamera), format CSV, protokol 6 pass untuk AI |
 | `alat/` | Toolkit analisis yang bisa dijalankan di localhost |
 | `blender/gaya_dasar.py` | Scene uji Blender yang menerapkan resep (strata, kerikil, rel termal, kabut jurang, tokoh kartu + ekspresi, kamera dorong → whip → orbit → crane) |
 
